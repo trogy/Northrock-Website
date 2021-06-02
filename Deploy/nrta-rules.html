@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  .blinking {
+  -webkit-animation: 1s blink ease infinite;
+  -moz-animation: 1s blink ease infinite;
+  -ms-animation: 1s blink ease infinite;
+  -o-animation: 1s blink ease infinite;
+  animation: 1s blink ease infinite;
+
+}
+
+@keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+    body {
+      height: 290vh;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-image: url("nrta-2.webp");
+      color: white;
+    }
+    .box{
+      margin: 10px;
+      text-align: center;
+      padding: 5px;
+      color:black;
+      overflow: hidden;
+      width:97vw;
+      height: 100%;
+      background-color: white;
+      -webkit-box-shadow: 0px 0px 43px -16px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 43px -16px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 43px -16px rgba(0,0,0,0.75);
+    }
+    .wrapper{
+      color:white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .main-title{
+      color:white;
+      text-align: center;
+    }
+    .content{
+      display: block;
+      margin: auto;
+    }
+    .split-wrapper{
+      display: flex;
+    }
+    .split{
+      width:50%;
+      padding: 10px;
+    }
+    .feature-image{
+      border-radius:10px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @media (max-width: 500px) {
+        .split-wrapper {
+            flex-direction: column;
+        }
+        .split{
+          width:100%;
+        }
+        .feature-image{
+                border-radius:10px;
+                position:unset !important;
+                top:unset !important;
+                transform:unset !important;
+        }
+    }
+    @keyframes slide {
+      0% {
+        transform:translateX(-25%);
+      }
+      100% {
+        transform:translateX(25%);
+      }
+    }
+/*    .bg {
+      animation:slide 12s ease-in-out infinite alternate;
+      background-image: linear-gradient(-60deg, #02922E 50%, #09f 50%);
+      bottom:0;
+      left:-50%;
+      opacity:.1;
+      position:fixed;
+      right:-50%;
+      top:0;
+      z-index:-1;
+    }
+
+    .bg2 {
+      animation-direction:alternate-reverse;
+      animation-duration:13s;
+    }
+
+    .bg3 {
+      animation-duration:14s;
+    }*/
+</style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Northrock</title>
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/offline-js/0.7.19/offline.min.js" integrity="sha512-KTivTC9CKUCyHiWM0wIqmkGMlMPREqaQlPIXcEMzza3fceLHnyuzJ00VSRw75TUXQE80MmugpySjAVu75S+bNg==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/offline-js/0.7.19/themes/offline-theme-dark.min.css" integrity="sha512-Bb78HVJavZyMGSiAgNLnirX5kDqEbg3RWuBo0TjLiGS5j2Ub6PwPRmUST49pleUN19+honhzpGOHRQF8jkCSXw==" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="content animate__animated animate__fadeIn">
+  <div class="main-title">
+    <br>
+    <img style=" image-rendering: -moz-crisp-edges; image-rendering: -webkit-crisp-edges; image-rendering: pixelated; image-rendering: crisp-edges;" src="northrocklogo.png" height="100%" width="20%"></img>
+    <br>
+  </div>
+    <div class="wrapper">
+        <div class="box">
+          <a href="index.html">  <button type="button" class="btn btn-dark">Home</button> </a>
+          <a href="nrta.html">  <button type="button" class="btn btn-dark">Travel</button> </a>
+          </div>
+          <div class="box">
+            <h3> Welcome to the NRTA </h3>
+            <p> Thank you for your interest in connecting to our extensive rail network below you will find guidelines and rules </p>
+            <hr>
+              <h3> NRTA Rail Lines - Main Requirements for Buildings</h3>
+              <hr>
+              <h5> - All stations must not disrupt or move the rail line away from its original course.<br> <br>
+                  - All Stations are required to have a NRTA JUMP terminal installed (You can go about this however you like just any kind of machine looking thing that says something along the lines of insert ticket.)<br><br>
+                  - Stations may run other non NRTA lines out of them, these lines must not interfere in any way with NRTA lines.<br><br>
+                  - You may build bridges level crossings and tunnels under and over the NRTA lines bridges must be AT LEAST 5 blocks above and tunnels AT LEAST 3 blocks below level crossings must be built to a reasonable standard use the single crossing in Northrock town center for reference (You dont have to follow the level crossing design exactly). </h5>
+
+                  <hr>
+                  <h5 style="color:red;"> Failure to comply with these rules will result in the removal of stop points at your station and/or removal of the station from within NRTA boundaries</h5>
+                  <h5> A warning will be givin prior to removal of anything.</h5>
+                  <p> Please add a sign with your username somewhere in your station so we can contact you.</p>
+                  <hr>
+                  <h4> For line specific Requirements scroll down </h4>
+                  <hr>
+          </div>
+        <div class="box">
+          <div class="split-wrapper">
+            <div class="split">
+              <img class="feature-image" src="nrta-2.webp" width="100%"></img>
+            </div>
+            <div class="split">
+              <img class="feature-image" src="nrta-3.webp" width="100%"></img>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+              <h3> NRTA North Eastern Special Requirements </h3>
+              <p>  </p>
+              <hr>
+                <h5> - Connecting a station at any point along the hill bridge is prohibited<br><br>
+                    -Building directly above the hill bridge is prohibited<br><br>
+                    -Building Below the hill bridge is allowed</h5>
+            </div>
+            <div class="box">
+                  <h3> NRTA Scenic Railway </h3>
+                  <p>  </p>
+                  <hr>
+                    <h5> - You must not in any way tamper with or move rails one this line<br><br>
+                        -You must not add stations to this line<br><br>
+                        -Permission to build level crossings bridges and tunnels is available from djtrogy in game.</h5>
+                </div>
+      </div>
+    </div>
+    <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+</body>
+
+</html>

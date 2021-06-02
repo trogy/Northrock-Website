@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  .blinking {
+  -webkit-animation: 1s blink ease infinite;
+  -moz-animation: 1s blink ease infinite;
+  -ms-animation: 1s blink ease infinite;
+  -o-animation: 1s blink ease infinite;
+  animation: 1s blink ease infinite;
+
+}
+
+@keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+    body {
+      height: 290vh;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-image: url("northrock-2.webp");
+      color: white;
+    }
+    .box{
+      margin: 10px;
+      text-align: center;
+      padding: 5px;
+      color:black;
+      overflow: hidden;
+      width:97vw;
+      height: 100%;
+      background-color: white;
+      -webkit-box-shadow: 0px 0px 43px -16px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 43px -16px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 43px -16px rgba(0,0,0,0.75);
+    }
+    .wrapper{
+      color:white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .main-title{
+      color:white;
+      text-align: center;
+    }
+    .content{
+      display: block;
+      margin: auto;
+    }
+    .split-wrapper{
+      display: flex;
+    }
+    .split{
+      width:50%;
+      padding: 10px;
+    }
+    .feature-image{
+      border-radius:10px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @media (max-width: 500px) {
+        .split-wrapper {
+            flex-direction: column;
+        }
+        .split{
+          width:100%;
+        }
+        .feature-image{
+                border-radius:10px;
+                position:unset !important;
+                top:unset !important;
+                transform:unset !important;
+        }
+    }
+    @keyframes slide {
+      0% {
+        transform:translateX(-25%);
+      }
+      100% {
+        transform:translateX(25%);
+      }
+    }
+    .bg {
+      animation:slide 12s ease-in-out infinite alternate;
+      background-image: linear-gradient(-60deg, #02922E 50%, #09f 50%);
+      bottom:0;
+      left:-50%;
+      opacity:.1;
+      position:fixed;
+      right:-50%;
+      top:0;
+      z-index:-1;
+    }
+
+    .bg2 {
+      animation-direction:alternate-reverse;
+      animation-duration:13s;
+    }
+
+    .bg3 {
+      animation-duration:14s;
+    }
+</style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Northrock</title>
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/offline-js/0.7.19/offline.min.js" integrity="sha512-KTivTC9CKUCyHiWM0wIqmkGMlMPREqaQlPIXcEMzza3fceLHnyuzJ00VSRw75TUXQE80MmugpySjAVu75S+bNg==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/offline-js/0.7.19/themes/offline-theme-dark.min.css" integrity="sha512-Bb78HVJavZyMGSiAgNLnirX5kDqEbg3RWuBo0TjLiGS5j2Ub6PwPRmUST49pleUN19+honhzpGOHRQF8jkCSXw==" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="content animate__animated animate__fadeIn">
+  <div class="main-title">
+    <br>
+    <img style=" image-rendering: -moz-crisp-edges; image-rendering: -webkit-crisp-edges; image-rendering: pixelated; image-rendering: crisp-edges;" src="northrocklogo.png" height="100%" width="20%"></img>
+    <br>
+  </div>
+    <div class="wrapper">
+        <div class="box">
+          <a href="index.html">  <button type="button" class="btn btn-dark">Home</button> </a>
+          <a href="nrta.html">  <button type="button" class="btn btn-dark">Travel</button> </a>
+        </div>
+        <div class="box">
+          <div class="split-wrapper">
+            <div class="split">
+              <h3 class="animate__animated animate__fadeInUp animate__delay-1s"> Welcome To Northrock </h3>
+              <hr>
+              <h5 class="animate__animated animate__fadeInUp animate__delay-1s">A small town situated just north of spawn</h5>
+              <br>
+              <p class="animate__animated animate__fadeInUp animate__delay-1s"> Learn whats on offer and how to visit us.</p>
+            <hr>
+            <h3 class="animate__animated animate__fadeInUp animate__delay-1s"> Northrock  News </h3>
+            <hr>
+            <div id="News-wrapper" style="overflow-y:scroll; max-height:450px;">
+            <div class="split-wrapper animate__animated animate__fadeInUp animate__delay-1s">
+
+              <div class="split" style="max-width:250px;">
+                <img class="feature-image" src="northrock-3.webp" width="100%"></img>
+              </div>
+
+              <div class="split" style="text-align:left;">
+                <a href="expansion.html">  <h5> Northrock Expansion [Pinned]</h5></a>
+                <p> Get information on the latest developments in northrock. </p>
+              </div>
+
+            </div>
+
+            <div class="split-wrapper animate__animated animate__fadeInUp animate__delay-1s">
+
+              <div class="split" style="max-width:250px;">
+                <img class="feature-image" src="nrta-2.webp" width="100%"></img>
+              </div>
+
+              <div class="split" style="text-align:left;">
+                <a href="nrta-rules.html">  <h5> NRTA North Eastern Railway Under Construction</h5></a>
+                <p> The NRTA is pleased to announce the NRTA North Eastern Railway this is set to be a public rail with a hub in Northrock's Main Station. Find out rules for building along this route by clicking the link above.</p>
+              </div>
+
+            </div>
+
+            <div class="split-wrapper animate__animated animate__fadeInUp animate__delay-1s">
+
+              <div class="split" style="max-width:250px;">
+                <img class="feature-image" src="northrock-1.webp" width="100%"></img>
+              </div>
+
+              <div class="split" style="text-align:left;">
+                <a href="expansion.html">  <h5> VIVO SPK and TruckersFM setup offices in Northrock</h5></a>
+                <p> Northrock city council has welcomed new buildings from companies SPK TruckersFM and VIVO these companies have long runnning histories in Telecoms, Financial and Radio and will be a great addition to our growing city. </p>
+              </div>
+
+            </div>
+
+            <div class="split-wrapper animate__animated animate__fadeInUp animate__delay-1s">
+
+              <div class="split" style="max-width:250px;">
+                <img class="feature-image" src="nrta-2.webp" width="100%"></img>
+              </div>
+
+              <div class="split" style="text-align:left;">
+                <a href="nrta.html">  <h5> NRTA Scenic Rail Finished</h5></a>
+                <p> The NRTA's Scenic rail has been completed featuring stunning from the top of the nearby mountains this railway is set to bring in large amounts of tourism. </p>
+              </div>
+
+            </div>
+
+
+            <div class="split-wrapper animate__animated animate__fadeInUp animate__delay-1s">
+
+              <div class="split" style="max-width:250px;">
+                <img class="feature-image" src="nrta-2.webp" width="100%"></img>
+              </div>
+
+              <div class="split" style="text-align:left;">
+                <a href="nrta.html">  <h5> Northrock Rail Transport Agency Established</h5></a>
+                <p> The Northrock city council has established the Northrock Rail Transport Agency to oversee current and future rail transport into and out of Northrock. </p>
+              </div>
+
+            </div>
+
+</div>
+          </div>
+            <div class="split">
+              <img class="feature-image" src="northrock-1.webp" width="100%"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+</body>
+
+</html>
